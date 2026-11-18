@@ -1,0 +1,25 @@
+{
+  "name": "sdd-graph-mcp",
+  "version": "0.1.0",
+  "description": "Local Hybrid Code-Graph Engine with React Fiber CoW Pattern (CURRENT/WIP) for SDD Workflow",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "bin": {
+    "sdd-graph-mcp": "./src/index.ts"
+  },
+  "scripts": {
+    "start": "node --no-use-system-ca --no-warnings src/index.ts",
+    "test": "node --no-use-system-ca --no-warnings --test --test-isolation=none test/*.test.ts",
+    "bench": "node --no-use-system-ca --no-warnings scripts/benchmark-repo.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "oxc-resolver": "^11.24.2",
+    "tree-sitter-wasms": "^0.1.13",
+    "web-tree-sitter": "^0.20.8",
+    "zod": "^4.6.7"
+  }
+}
